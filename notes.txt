@@ -1,0 +1,13 @@
+- pure functions: given the same props and state, they should always return the same output without side effects
+
+To build meaningful componenets:
+- Encapsulation: Each component should manage its own structure and behavior, making it self-contained and easy to reuse
+- Reusability
+- Isolation: Components should function independently Changes in one component shouldnt impact the other unless theyre explicitly connected 
+- Separation of concerns: Breaking the UI into smaller, focused components allows developers to concentrate on specific features or sections without needing to understand the entire application at once
+
+State management:
+- Ensures that components display the most up-to-date information by triggering re-renders whenever underlying data changes
+- React introduces Hooks as a modern way to manage state and side effects in functional components
+- The useState hook allows devs to add local state to components
+- useEffect handles side effects e.g. data fetching or updating the DOM
