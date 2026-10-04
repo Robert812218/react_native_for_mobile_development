@@ -11,3 +11,21 @@ State management:
 - React introduces Hooks as a modern way to manage state and side effects in functional components
 - The useState hook allows devs to add local state to components
 - useEffect handles side effects e.g. data fetching or updating the DOM
+
+Context in React:
+- A feature that lets one shara data (e.g. state, functions or values) across ones component tree without having to pass props manually at every level
+- Especially useful for sharing global data like authentication status, theme, or user info with deeply nested components that need the same data
+
+When to use context:
+- Theme data (dark/light mode)
+- Authentication state
+- Localization/language settings
+- Data needed by many components at different nesting levels 
+
+When NOT to use context:
+- Data only needed by one or two closely related components (use props)
+- Frequently changing data that affects many components 
+
+
+
+
