@@ -26,6 +26,7 @@ When NOT to use context:
 - Data only needed by one or two closely related components (use props)
 - Frequently changing data that affects many components 
 
-
+new app:
+- npx create-expo-app <Application Name>
 
 
