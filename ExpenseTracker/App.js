@@ -1,19 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import HomeScreen from './screens/HomeScreen';
+import AddAssetScreen from './screens/AddAssetsScreen';
+import TransitionScreen from './screens/TransitionScreen';
+import StatsScreen from './screens/TransactionScreen';
+
+const Tab = createBottomTavNavigator();
+
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello World !!</Text>
-      <Text> This is my First React Native App</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	return (
+		<NavigationContainer>
+			<Tab.Navigator>
+				<Tab.Screen name="Home" component={HomeScreen} />
+				<Tab.Screen name="Add Assets" component={AddAssetsScreen} />
+				<Tab.Screen name="Transaction" component={TransactionScreen} />
+				<Tab.Screen name="Stats" component={StatsScreen} />
+			</Tab.Navigator>
+		</NavigationContainer>
+	)
 }
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
